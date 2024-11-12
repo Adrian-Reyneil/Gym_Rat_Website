@@ -125,7 +125,7 @@ function generateCode() {
 // Send Reset Code Email using Mailgun
 async function sendResetCodeEmail(email, resetCode) {
     const data = {
-        from: 'adrianmainim@gmail.com', // Replace with your verified email
+        from: ' edorianpuru@gmail.com', // Replace with your verified email
         to: email,
         subject: 'Your Password Reset Code',
         text: `Your password reset code is: ${resetCode}`,
