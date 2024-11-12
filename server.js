@@ -13,6 +13,10 @@ const mailgun = require('mailgun-js'); // Import mailgun
 const app = express();
 const PORT = process.env.PORT || 3000;
 const mongoUri = process.env.MONGODB_URI;
+const DOMAIN = process.env.MAILGUN_DOMAIN; // Use environment variable for domain
+const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: DOMAIN });
+
+
 
 /// Session management with MongoDB store
 app.use(session({
@@ -69,8 +73,7 @@ const loginLimiter = rateLimit({
     }
 });
 
-// Configure Mailgun
-const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY, domain: process.env.MAILGUN_DOMAIN });
+
 
 // MongoDB connection
 mongoose.connect(mongoUri).then(() => {
