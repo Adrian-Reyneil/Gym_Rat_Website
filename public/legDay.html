@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routines</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Linking to the same CSS file -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Color Variables */
+        :root {
+            --bg-color: #000000;
+            --second-bg-color: rgba(17, 17, 17, 0.8);
+            --text-color: #ffffff;
+            --main-color: #ff7b00;
+            --highlight-color: #FFD700;
+        }
+
+        /* Body & Basic Styling */
+        body {
+            background-image: url("BGdashboard.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--text-color);
+            font-size: 1.4rem;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Overlay for readability */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--second-bg-color);
+            z-index: 1;
+        }
+
+        /* Home Section with Flex Layout */
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 10rem 8% 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Flex container for workout details and image */
+        .home-content {
+            display: flex;
+            max-width: 850px;
+            padding: 2rem;
+            border-radius: 1.2rem;
+            background-color: var(--second-bg-color);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .workout-details {
+            flex: 1;
+            padding-right: 2rem;
+        }
+
+        .workout-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .workout-image img {
+            max-width: 90%;
+            height: 28rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(255, 123, 0, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Routine List */
+        #leg-routine {
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        #leg-routine li {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        #leg-routine li::before {
+            content: "💪";
+            margin-right: 1rem;
+            color: var(--main-color);
+        }
+
+        /* Headings */
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--highlight-color);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            opacity: 0.9;
+        }
+
+        /* Button Styles */
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn, .back-btn {
+            padding: 0.8rem 2.4rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+            transition: 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn {
+            background: var(--main-color);
+            color: var(--bg-color);
+        }
+
+        .back-btn {
+            color: var(--highlight-color);
+            border: 2px solid var(--highlight-color);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px var(--main-color);
+        }
+
+        .back-btn:hover {
+            background: var(--highlight-color);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <section class="home" id="home">
+        <div class="home-content">
+
+            <div class="workout-details">
+                <h2>Leg Day Routine</h2>
+                <p>Strengthen your legs with squats, lunges, and other lower body exercises:</p>
+                <ul id="leg-routine">
+                    <li>Squats - 4 sets of 8-12 reps</li>
+                    <li>Lunges - 3 sets of 10-12 reps per leg</li>
+                    <li>Leg Press - 4 sets of 8-12 reps</li>
+                    <li>Calf Raises - 4 sets of 15-20 reps</li>
+                </ul>
+                <div class="btn-container">
+                    <button class="btn" id="start-leg">Start Leg Day</button>
+                    <a href="getStarted.html" class="back-btn">Back</a>
+                </div>
+            </div>
+
+
+            <div class="workout-image">
+                <img src="legsExercise.jpg" alt="Leg Day Workout">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('start-leg').addEventListener('click', function() {
+            alert('Starting Leg Day! Time to build those legs.');
+        });
+    </script>
+    
+</body>
+</html>

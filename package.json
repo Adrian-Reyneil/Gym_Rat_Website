@@ -1,0 +1,28 @@
+{
+  "name": "adrianreyneil",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"\\nError: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "express-session": "^1.18.1",
+    "helmet": "^8.0.0",
+    "mailgun-js": "^0.22.0",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
+    "rate-limit": "^0.1.1",
+    "validator": "^13.12.0"
+  }
+}

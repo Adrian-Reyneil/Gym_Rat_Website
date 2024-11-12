@@ -1,0 +1,140 @@
+/* Background and container styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("GymBG.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 350px;
+    background-color: rgba(100, 100, 100, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Sign-upform-container{
+    background-color: rgba(50, 50, 50, 0.85);
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 400px;
+    width: 100%;
+}
+
+.Sign-upform-container h3 {
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #ff7b00; /* Orange underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.Sign-upform-container input[type="checkbox"] {
+    margin-top: -10px;
+}
+
+.Sign-upform-container input[type="email"],
+.Sign-upform-container input[type="password"],
+.Sign-upform-container input[type="text"] {
+    width: 92%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+}
+
+/* Form container styling */
+.form-container {
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-container h3 {
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 2px solid #ff7b00; /* Orange underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="text"] {
+    width: 92%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f0f0f0;
+}
+
+.form-container input[type="checkbox"] {
+    margin-top: -10px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff7b00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e06c00;
+}
+
+/* Footer link styling */
+.footer {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer p {
+    color: #d3d3d3;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #ff7b00;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routines</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, sans-serif;
+        }
+
+        /* Color Variables */
+        :root {
+            --bg-color: #000000;
+            --second-bg-color: #111111;
+            --text-color: #ffffff;
+            --main-color: #ff7b00;
+            --btn-hover-color: #ff9c33;
+            --box-shadow-color: rgba(255, 123, 0, 0.5);
+        }
+
+        /* Body & Background Styling */
+        body {
+            background-image: url("BGdashboard.jpg");
+            background-size: cover;
+            background-position: center;
+            color: var(--text-color);
+            font-size: 1.4rem;
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Centered Box for Content */
+        .home-content {
+            max-width: 700px;
+            padding: 2rem 2.5rem;
+            border-radius: 1.2rem;
+            background-color: var(--second-bg-color);
+            box-shadow: 0 0 20px var(--box-shadow-color);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Text Styling */
+        .home-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .home-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Routine Item Styles */
+        .routine-list {
+            margin-top: 1rem;
+        }
+
+        .routine-item {
+            margin-bottom: 1.8rem;
+        }
+
+        .routine-item h3 {
+            font-size: 2rem;
+            color: var(--main-color);
+            text-align: left;
+        }
+
+        .routine-item p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #ddd;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.8rem 2.4rem;
+            background: var(--main-color);
+            color: var(--bg-color);
+            border-radius: 1rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0px 5px 10px rgba(255, 123, 0, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 15px rgba(255, 123, 0, 0.6);
+            background: var(--btn-hover-color);
+        }
+
+        /* Back Button Positioned to Bottom Right */
+        .back-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            background: var(--main-color);
+            text-decoration: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 0.8rem;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(255, 123, 0, 0.4);
+        }
+
+        .back-btn:hover {
+            background: var(--btn-hover-color);
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 15px rgba(255, 123, 0, 0.6);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <section class="home">
+        <div class="home-content">
+            <h2>Welcome to Gym <span style="color:#ff7b00">Rat</span>!</h2>
+            <p>Select a workout routine to begin your fitness journey:</p>
+            <div class="routine-list">
+                <div class="routine-item">
+                    <h3>Push Day:</h3>
+                    <p>Focus on exercises that target your chest, shoulders, and triceps.</p>
+                    <br>
+                    <a href="pushDay.html" class="btn">Explore Push Day</a>
+                </div>
+                <div class="routine-item">
+                    <h3>Pull Day:</h3>
+                    <p>Target your back and biceps with these effective exercises.</p>
+                    <br>
+                    <a href="pullDay.html" class="btn">Explore Pull Day</a>
+                </div>
+                <div class="routine-item">
+                    <h3>Leg Day:</h3>
+                    <p>Strengthen your legs with squats, lunges, and other lower body exercises.</p>
+                    <br>
+                    <a href="legDay.html" class="btn">Explore Leg Day</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Back Button Positioned to Bottom Right of the Screen -->
+    <a href="dashboard.html" class="back-btn">Back to Dashboard</a>
+</body>
+</html>
